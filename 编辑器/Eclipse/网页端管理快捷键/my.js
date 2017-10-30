@@ -95,7 +95,26 @@ $(function() {
             return false;
         // }
     });
+
+    $('#multiKeyModeBtn').addClass('active');
+
+    // 切换为单键模式
+    $('#singleKeyModeBtn').on('click',function(){
+        $(this).addClass('active');
+        $('#multiKeyModeBtn').removeClass('active');
+
+        // 清空Input
+    });
+
+    $('#clearInputBtn').on('click',function(){
+
+    });
 });
+
+
+function clearKeyInput(){
+    $('#keyBind').val();
+}
 
 function sortKeys(keys){
 	if(!keys){
