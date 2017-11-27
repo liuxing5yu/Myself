@@ -1,4 +1,5 @@
 $(function() {
+    $('#tb').DataTable();
 
     $('#saveRows').on('click',function(){
         var trs=[];
