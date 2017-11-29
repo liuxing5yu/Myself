@@ -28,9 +28,8 @@ $(function() {
         dom: 'rt<"bottom"iflp<"clear">>',
         stateSave: true,
         searching : false, // 禁用原生搜索
-        ordering: false,
+        ordering: false
         
-        "ajax": "data.json"
     });
 
     $('#saveRows').on('click', function() {
@@ -43,7 +42,7 @@ $(function() {
     });
 
     // 添加行模态框显示时
-    $('#addRowModal').on('show.bs.modal', function() {
+    /*$('#addRowModal').on('show.bs.modal', function() {
         // 清空表单数据
         $('#addRowForm')[0].reset();
         // 清空按键数组
@@ -54,13 +53,8 @@ $(function() {
         // 聚焦在第一个输入框内
         $('#keyBind').focus();
 
-    });
+    });*/
 
-
-    // 点击添加行按钮
-    $('#addRow').on('click', function() {
-        $('#addRowModal').modal('show');
-    });
 
     // 点击Save按钮
     $('#saveRow').on('click', function() {
@@ -74,8 +68,6 @@ $(function() {
         $tr.append($keyTd).append($effectTd);
 
         $('#tb').append($tr);
-
-        $('#addRowModal').modal('hide');
     });
 
     // 映射键值和对应显示的值: keyCode/*key*/: showValue
