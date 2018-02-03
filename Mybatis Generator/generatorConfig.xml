@@ -11,7 +11,7 @@
 	<!-- <context> 元素用于指定生成一组对象的环境。 子元素用于指定要连接到的数据库、 要生成对象的类型和要内省的表。 -->
 	<context id="personalContext" targetRuntime="MyBatis3">
 		<!-- 设置要使用的Java文件的编码 -->
-		<!-- <property name="javaFileEncoding" value="UTF-8" /> -->
+		<property name="javaFileEncoding" value="UTF-8" />
 
 		<!-- <commentGenerator> 元素用来定义注释生成器的属性 -->
 		<commentGenerator>
@@ -37,7 +37,7 @@
 		</sqlMapGenerator>
 
 		<!-- <javaClientGenerator> 元素来指定目标包和目标项目生成的客户端接口和类 -->
-		<javaClientGenerator type="MIXEDMAPPER" targetPackage="com.hwj.modules.collect.dao" targetProject="personal">
+		<javaClientGenerator type="XMLMAPPER" targetPackage="com.hwj.modules.collect.dao" targetProject="personal">
 			<property name="enableSubPackages" value="true" />
 		</javaClientGenerator>
 
